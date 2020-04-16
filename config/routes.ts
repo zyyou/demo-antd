@@ -1,5 +1,10 @@
 export default [
   {
+    name: 'test',
+    path: '/test',
+    component: './test',
+  },
+  {
     path: '/user',
     component: '../layouts/UserLayout',
     routes: [
