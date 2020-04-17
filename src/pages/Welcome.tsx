@@ -12,7 +12,7 @@ const CodePreview: React.FC<{}> = ({ children }) => (
 );
 
 export default (): React.ReactNode => (
-  <PageHeaderWrapper>
+  <PageHeaderWrapper title="zyy test">
     <Card>
       <Alert
         message="umi ui 现已发布，点击右下角 umi 图标即可使用"

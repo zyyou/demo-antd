@@ -8,7 +8,7 @@ const { REACT_APP_ENV } = process.env;
 
 export default defineConfig({
   history: { type: 'hash' },
-  hash: true,
+  hash: false,
   antd: {},
   dva: {
     hmr: true,
