@@ -5,7 +5,7 @@
   "description": "An out-of-box UI solution for enterprise applications",
   "scripts": {
     "analyze": "cross-env ANALYZE=1 umi build",
-    "build": "rm -rf ../demo-antd-dist && umi build",
+    "build": "rm -rf ../demo-antd-dist/dist && umi build",
     "deploy": "npm run site && npm run gh-pages",
     "dev": "UMI_UI=none npm run start:dev",
     "fetch:blocks": "pro fetch-blocks --branch=umi@3 && npm run prettier",
