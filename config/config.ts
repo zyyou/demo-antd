@@ -7,6 +7,7 @@ import routes from './routes';
 const { REACT_APP_ENV } = process.env;
 
 export default defineConfig({
+  outputPath: '../demo-antd-dist',
   history: { type: 'hash' },
   hash: false,
   antd: {},
