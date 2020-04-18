@@ -1,3 +1,5 @@
+// 该布局不需要登录
+
 import { DefaultFooter, MenuDataItem, getMenuData, getPageTitle } from '@ant-design/pro-layout';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { Link, useIntl, ConnectProps, connect } from 'umi';
@@ -5,15 +7,15 @@ import React from 'react';
 import SelectLang from '@/components/SelectLang';
 import { ConnectState } from '@/models/connect';
 import logo from '../assets/logo.svg';
-import styles from './UserLayout.less';
+import styles from './Default.less';
 
-export interface UserLayoutProps extends Partial<ConnectProps> {
+export interface DefaultProps extends Partial<ConnectProps> {
   breadcrumbNameMap: {
     [path: string]: MenuDataItem;
   };
 }
 
-const UserLayout: React.FC<UserLayoutProps> = (props) => {
+const UserLayout: React.FC<DefaultProps> = (props) => {
   const {
     route = {
       routes: [],

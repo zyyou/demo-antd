@@ -1,3 +1,5 @@
+// 该布局校验登录
+
 import React from 'react';
 import { PageLoading } from '@ant-design/pro-layout';
 import { Redirect, connect, ConnectProps } from 'umi';
@@ -5,17 +7,17 @@ import { stringify } from 'querystring';
 import { ConnectState } from '@/models/connect';
 import { CurrentUser } from '@/models/user';
 
-interface SecurityLayoutProps extends ConnectProps {
+interface SecurityProps extends ConnectProps {
   loading?: boolean;
   currentUser?: CurrentUser;
 }
 
-interface SecurityLayoutState {
+interface SecurityState {
   isReady: boolean;
 }
 
-class SecurityLayout extends React.Component<SecurityLayoutProps, SecurityLayoutState> {
-  state: SecurityLayoutState = {
+class Security extends React.Component<SecurityProps, SecurityState> {
+  state: SecurityState = {
     isReady: false,
   };
 
@@ -54,4 +56,4 @@ class SecurityLayout extends React.Component<SecurityLayoutProps, SecurityLayout
 export default connect(({ user, loading }: ConnectState) => ({
   currentUser: user.currentUser,
   loading: loading.models.user,
-}))(SecurityLayout);
+}))(Security);

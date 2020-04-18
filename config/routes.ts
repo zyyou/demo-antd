@@ -1,12 +1,7 @@
 export default [
   {
-    name: 'test',
-    path: '/test',
-    component: './test',
-  },
-  {
     path: '/user',
-    component: '../layouts/UserLayout',
+    component: '../layouts/Default',
     routes: [
       {
         name: 'login',
@@ -17,7 +12,7 @@ export default [
   },
   {
     path: '/',
-    component: '../layouts/SecurityLayout',
+    component: '../layouts/Security',
     routes: [
       {
         path: '/',
@@ -33,6 +28,11 @@ export default [
             name: 'welcome',
             icon: 'smile',
             component: './Welcome',
+          },
+          {
+            name: 'test',
+            path: '/test',
+            component: './test',
           },
           {
             path: '/admin',
