@@ -98,7 +98,7 @@ const TableList: React.FC<{}> = () => {
       title: '服务调用次数',
       dataIndex: 'callNo',
       sorter: true,
-      hideInForm: true,
+      hideInForm: true, // 新增表单中隐藏
       renderText: (val: string) => `${val} 万`,
     },
     {
