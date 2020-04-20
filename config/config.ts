@@ -2,7 +2,7 @@
 import { defineConfig } from 'umi';
 import defaultSettings from './defaultSettings';
 import proxy from './proxy';
-import routes from './routes';
+import routes from './config.routes';
 
 const { REACT_APP_ENV } = process.env;
 

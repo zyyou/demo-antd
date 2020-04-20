@@ -55,7 +55,7 @@ export default {
   menu: {
     locale: true,
   },
-  title: 'zyy test title',
+  title: 'title配置defaultSettings.ts',
   pwa: false,
   iconfontUrl: '',
 } as DefaultSettings;
