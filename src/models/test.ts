@@ -24,6 +24,7 @@ const Model: TestModelType = {
 
   effects: {
     *getValue({ payload }, { call }) {
+      console.log('1.model.getValue');
       // console.log('getValue', payload, call);
       const response = yield call(getRemoteValue, payload);
       return {

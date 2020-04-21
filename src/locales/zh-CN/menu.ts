@@ -1,5 +1,6 @@
 export default {
   'menu.test': 'ZYY测试-多语言配置',
+  'menu.testself': 'ZYY测试独立目录',
   'menu.welcome': '欢迎',
   'menu.more-blocks': '更多区块',
   'menu.home': '首页',

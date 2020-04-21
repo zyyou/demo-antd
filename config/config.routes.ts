@@ -34,6 +34,11 @@ export default [
             path: '/test',
             component: './test',
           },
+          // {
+          //   name: 'testself',
+          //   path: '/testself',
+          //   component: './testself',
+          // },
           {
             path: '/admin',
             name: 'admin',

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { connect, Dispatch } from 'umi';
 import { Button } from 'antd';
-import { ConnectState } from '@/models/connect';
+
 import { PageHeaderWrapper } from '@ant-design/pro-layout';
 
 import { StateType } from '@/models/test';
@@ -34,7 +34,17 @@ const Test: React.FC<TestProps> = (props) => {
   );
 };
 
-export default connect(({ login, loading }: ConnectState) => ({
-  userLogin: login,
-  submitting: loading.effects['test/getValue'],
-}))(Test);
+export default connect(
+  ({
+    test,
+    loading,
+  }: {
+    test: any;
+    loading: {
+      effects: { [key: string]: boolean };
+    };
+  }) => ({
+    test,
+    loading: loading.effects['test/getValue'],
+  }),
+)(Test);
