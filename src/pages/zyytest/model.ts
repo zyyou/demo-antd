@@ -5,6 +5,8 @@ import { getRemoteValue } from './service';
 export interface ApiDataType {
   id?: string;
   from?: string;
+  random?: number;
+  data?: any;
 }
 
 export interface ZyyTestModelState {

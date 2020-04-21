@@ -3,11 +3,11 @@ import { connect, Dispatch } from 'umi';
 import { Button, Card, Descriptions, notification } from 'antd';
 
 import { PageHeaderWrapper } from '@ant-design/pro-layout';
+import { ApiDataType } from './model';
 
 interface ZyyTestProps {
   dispatch: Dispatch;
-  profile: any;
-  zyytest: any;
+  zyytest: ApiDataType;
 }
 
 const ZyyTest: React.FC<ZyyTestProps> = (props) => {
@@ -46,17 +46,6 @@ const ZyyTest: React.FC<ZyyTestProps> = (props) => {
   );
 };
 
-export default connect(
-  ({
-    zyytest,
-    loading,
-  }: {
-    zyytest: any;
-    loading: {
-      effects: { [key: string]: boolean };
-    };
-  }) => ({
-    zyytest,
-    loading: loading.effects['zyytest/getVal'],
-  }),
-)(ZyyTest);
+export default connect((zyytest: ApiDataType) => ({
+  ...zyytest,
+}))(ZyyTest);
