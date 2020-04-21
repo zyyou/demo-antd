@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { connect, Dispatch } from 'umi';
 import { Button } from 'antd';
 
+// import { ConnectState } from '@/models/connect';
 import { PageHeaderWrapper } from '@ant-design/pro-layout';
 
 import { StateType } from '@/models/test';
