@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'umi';
-import { Button } from 'antd';
+import { Button, notification } from 'antd';
 
 // import { ConnectState } from '@/models/connect';
 import { PageHeaderWrapper } from '@ant-design/pro-layout';
@@ -9,9 +9,14 @@ import { getRemoteValue } from './service';
 
 const ZyyTest: React.FC<{}> = () => {
   const btnClickHandler = async () => {
-    const res = await getRemoteValue({ id: 'ABC123', from: 'ztest' });
+    const res = await getRemoteValue({ id: 'ABC123', data: 'ztest' });
     console.log('res=', res);
-    return res;
+
+    notification.info({
+      // duration: 10,
+      message: 'getRemoteValue',
+      description: JSON.stringify(res),
+    });
   };
 
   return (
