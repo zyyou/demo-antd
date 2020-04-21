@@ -16,7 +16,7 @@ const ZyyTest: React.FC<ZyyTestProps> = (props) => {
 
     const res = await dispatch({
       type: 'zyytest/getVal',
-      payload: { id: 'aaaa', data: 'bbbb' },
+      payload: { id: 'aaaa', data: `r${Math.round(Math.random() * 10)}` },
     });
 
     notification.info({
