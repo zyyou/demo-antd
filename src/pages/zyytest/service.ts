@@ -6,10 +6,11 @@ export interface TestParamsType {
 }
 
 export async function getRemoteValue(params: TestParamsType) {
-  console.log('2.service.getRemoteValue');
+  console.log('service.getRemoteValue');
   // console.log('params', params);
-  return request('/api/test/getvalue', {
-    method: 'POST',
+  const res = request('/api/zyytest/getvalue', {
+    method: 'GET',
     data: params,
   });
+  return res;
 }

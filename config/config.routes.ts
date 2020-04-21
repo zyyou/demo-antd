@@ -30,15 +30,10 @@ export default [
             component: './Welcome',
           },
           {
-            name: 'test',
-            path: '/test',
-            component: './test',
+            name: 'zyytest',
+            path: '/zyytest',
+            component: './zyytest',
           },
-          // {
-          //   name: 'testself',
-          //   path: '/testself',
-          //   component: './testself',
-          // },
           {
             path: '/admin',
             name: 'admin',

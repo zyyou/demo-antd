@@ -1,28 +1,17 @@
-import React, { useState } from 'react';
-import { connect, Dispatch } from 'umi';
+import React from 'react';
+import { connect } from 'umi';
 import { Button } from 'antd';
 
 // import { ConnectState } from '@/models/connect';
 import { PageHeaderWrapper } from '@ant-design/pro-layout';
 
-import { StateType } from '@/models/test';
+import { getRemoteValue } from './service';
 
-interface TestProps {
-  dispatch: Dispatch;
-  userLogin: StateType;
-  submitting?: boolean;
-}
-
-const Test: React.FC<TestProps> = (props) => {
-  const [type] = useState<string>('account');
-
-  const btnClickHandler = (values: any) => {
-    const { dispatch } = props;
-    console.log('按钮被点击');
-    dispatch({
-      type: 'test/getValue',
-      payload: { ...values, type },
-    });
+const ZyyTest: React.FC<{}> = () => {
+  const btnClickHandler = async () => {
+    const res = await getRemoteValue({ id: 'ABC123', from: 'ztest' });
+    console.log('res=', res);
+    return res;
   };
 
   return (
@@ -48,4 +37,4 @@ export default connect(
     test,
     loading: loading.effects['test/getValue'],
   }),
-)(Test);
+)(ZyyTest);

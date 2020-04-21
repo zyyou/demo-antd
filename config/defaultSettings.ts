@@ -55,7 +55,7 @@ export default {
   menu: {
     locale: true,
   },
-  title: 'title配置defaultSettings.ts',
+  title: '配置在defaultSettings',
   pwa: false,
   iconfontUrl: '',
 } as DefaultSettings;
