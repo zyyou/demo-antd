@@ -7,6 +7,7 @@ export default {
     res.send({
       ...req.query,
       ...req.body,
+      random: Math.round(Math.random() * 100),
       from: 'zyy mock',
     });
   },
