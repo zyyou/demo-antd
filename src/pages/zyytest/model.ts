@@ -9,13 +9,9 @@ export interface ApiDataType {
   data?: any;
 }
 
-export interface ZyyTestModelState {
-  apiData?: ApiDataType;
-}
-
 export interface ZyyTestModelType {
-  namespace: 'zyytest';
-  state: ZyyTestModelState;
+  namespace: string;
+  state: ApiDataType;
   effects: {
     getVal: Effect;
   };
@@ -27,9 +23,7 @@ export interface ZyyTestModelType {
 const ZyyTestModel: ZyyTestModelType = {
   namespace: 'zyytest',
 
-  state: {
-    apiData: {},
-  },
+  state: {},
 
   effects: {
     *getVal({ payload }, { call, put, select }) {
