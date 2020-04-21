@@ -32,6 +32,7 @@ export default [
           {
             name: 'zyytest',
             path: '/zyytest',
+            icon: 'bug',
             component: './zyytest',
           },
           {
